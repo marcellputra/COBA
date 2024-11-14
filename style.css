@@ -1,0 +1,215 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    padding-top: 50px; /* To prevent content being hidden behind the navbar */
+    padding-bottom: 50px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Navbar Styles */
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  #navbar ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  #navbar ul li a:hover {
+    color: #ff6347;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Letakkan elemen dalam baris */
+    text-align: left; /* Untuk memastikan teks tidak berada di tengah */
+    gap: 2rem; /* Menambahkan jarak antara gambar dan teks */
+    padding: 0 20px;
+  }
+  
+  
+  .hero-img {
+    width: 150px; /* Ukuran gambar lebih kecil */
+    height: 150px; /* Ukuran gambar lebih kecil */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  }
+
+  .hero-text {
+    max-width: 700px; /* Membatasi lebar teks agar tidak terlalu melebar */
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  
+  #hero p {
+    margin-top: 0.5rem;
+  }
+  
+  /* About Me Section */
+  #about-me {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.2s;
+  }
+  
+  #about-me p {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Project Section */
+  #projects {
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.4s;
+  }
+  
+  .project {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .project h3 {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+  
+  /* Contact Me Section */
+  #contact {
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    color: #fff;
+    padding: 1.5rem; 
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.6s;
+  }
+  
+  #contact p, #contact a {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  #contact p {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem; /* Mengurangi ukuran font agar tampilan lebih kecil */
+  }
+
+  #contact a {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 0.9rem; /* Mengurangi ukuran font agar tampilan lebih kecil */
+    text-decoration: none;
+    margin-top: 0.5rem; /* Memberikan jarak sedikit antara link */
+  }
+  
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Styles */
+  #footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  #footer p {
+    margin: 0;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scroll Animations */
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in-visible {
+    opacity: 1;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #navbar ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    #hero, #about-me, #projects, #contact {
+      padding: 1rem;
+    }
+  }
+  
